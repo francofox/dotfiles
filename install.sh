@@ -6,7 +6,7 @@ dirs=('dunst' 'hypr' 'kitty' 'swayidle' 'waybar' 'wlogout' 'wofi')
 
 for dir in "${dirs[@]}" ; do
   if [[ -e $XDG_CONFIG_HOME/$dir ]] ; then
-    mv $XDG_CONFIG_HOME/$dir "$XDG_CONFIG_HOME/${dir}.orig" && echo "Renamed existing $XDG_CONFIG_HOME/$dir to $XDG_CONFIG_HOME/${dir}.conf"
+    mv $XDG_CONFIG_HOME/$dir "$XDG_CONFIG_HOME/${dir}.orig" && echo "Renamed existing $XDG_CONFIG_HOME/$dir to $XDG_CONFIG_HOME/${dir}.orig"
   fi
   cp -r ./.config/$dir $XDG_CONFIG_HOME/$dir && echo "Copied ./.config/$dir to $XDG_CONFIG_HOME/$dir"
 done
